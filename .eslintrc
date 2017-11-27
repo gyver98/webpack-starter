@@ -1,0 +1,26 @@
+{
+  "extends": ["airbnb-base/legacy", "prettier"],
+  "plugins": ["prettier"], // activating eslint-plugin-prettier (--fix stuff)
+  "rules": {
+    "prettier/prettier": [
+      // customizing prettier rules (unfortunately not many of them are customizable)
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "all",
+        "tabWidth": 2,
+        "printWidth": 80,
+        "bracketSpacing": true
+      }
+    ],
+    "eqeqeq": ["error", "always"], // adding some custom ESLint rules
+    "no-console": 0
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "env": {
+    "browser": true
+  }
+}

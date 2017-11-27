@@ -1,0 +1,16 @@
+/* eslint-env mocha */
+import removeAttr from '../utils/applyClass';
+// import { expect } from 'chai';
+import sinon from 'sinon';
+
+describe('remove attribute', () => {
+  it('removes contenteditable attribute', () => {
+    const getEl = sinon.stub(document.body, 'getElementsByTagName');
+    const fakeH1Tag = {
+      contentEditable: sinon.stub(),
+    };
+    getEl.withArgs('editable-heading').returns([fakeH1Tag]);
+    removeAttr();
+    sinon.assert.calledWith(fakeH1Tag.contentEditable);
+  });
+});
