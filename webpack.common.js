@@ -1,7 +1,5 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// webpack dashboard plugin
-//const DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
   // Two entry points here means that Webpack will start a bundle for the individual dependencies of both index.js and main.scss
