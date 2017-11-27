@@ -1,7 +1,7 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // webpack dashboard plugin
-const DashboardPlugin = require('webpack-dashboard/plugin');
+//const DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
   // Two entry points here means that Webpack will start a bundle for the individual dependencies of both index.js and main.scss
@@ -66,6 +66,5 @@ module.exports = {
   // [hash] adds a cache busting string to the file
   plugins: [
     new ExtractTextPlugin('main.css'),
-    new DashboardPlugin(),
   ],
 };

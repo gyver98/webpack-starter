@@ -1,5 +1,5 @@
 import setFocus from './utils/setfocus';
-import store from './utils/stor';
+import store from './utils/store';
 import applyClass from './utils/applyClass';
 
 window.onload = () => {
