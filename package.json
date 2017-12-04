@@ -4,10 +4,15 @@
   "description": "Basic FED Project Setup",
   "main": "index.js",
   "scripts": {
+    "precommit": "npm run lint",
+    "prepush": "npm run lint",
+    "lint": "eslint src/**",
     "test": "mocha-webpack || true",
     "watch": "mocha-webpack --watch || true",
-    "start": "webpack-dashboard -- webpack-dev-server --config webpack.dev.js --open",
-    "build": "webpack --config webpack.prod.js"
+    "start": "webpack-dev-server --config webpack.dev.js --open",
+    "start:board": "webpack-dashboard -- webpack-dev-server --config webpack.dev.js --open",
+    "build": "webpack --config webpack.dev.js",
+    "production": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "dependencies": {},
